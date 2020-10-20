@@ -13,35 +13,35 @@ $(document).ready(function() {
 
 
 
-
-preloadVideo('video-1', 'assets/video/movie_a.mp4');
-preloadVideo('commander-movie', 'assets/video/movie_b.mp4');
-preloadVideo('control-movie', 'assets/video/movie_c.mp4');
-
-
-
-
-function preloadVideo(elementId, videoPath) {
-    let xhr = new XMLHttpRequest();
-    xhr.open('GET', videoPath, true);
-    xhr.responseType = 'blob';
-    xhr.onload = function(e) {
-        if (this.status == 200) {
-            // console.log("got it" + videoPath);
-            let myBlob = this.response;
-            let vid = (window.webkitURL || window.URL).createObjectURL(myBlob);
-            // myBlob is now the blob that the object URL pointed to.
-            let video = document.getElementById(elementId);
-            // console.log("Loading video into element");
-            video.src = vid;
-            // not needed if autoplay is set for the video element
-            // video.play();
-            console.log(videoPath, "READY!");
-        }
-    };
-
-    xhr.send();
-}
+//
+// preloadVideo('video-1', 'assets/video/movie_a.mp4');
+// preloadVideo('commander-movie', 'assets/video/movie_b.mp4');
+// preloadVideo('control-movie', 'assets/video/movie_c.mp4');
+//
+//
+//
+//
+// function preloadVideo(elementId, videoPath) {
+//     let xhr = new XMLHttpRequest();
+//     xhr.open('GET', videoPath, true);
+//     xhr.responseType = 'blob';
+//     xhr.onload = function(e) {
+//         if (this.status == 200) {
+//             // console.log("got it" + videoPath);
+//             let myBlob = this.response;
+//             let vid = (window.webkitURL || window.URL).createObjectURL(myBlob);
+//             // myBlob is now the blob that the object URL pointed to.
+//             let video = document.getElementById(elementId);
+//             // console.log("Loading video into element");
+//             video.src = vid;
+//             // not needed if autoplay is set for the video element
+//             // video.play();
+//             console.log(videoPath, "READY!");
+//         }
+//     };
+//
+//     xhr.send();
+// }
 
 
 
