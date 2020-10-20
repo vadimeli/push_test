@@ -1,6 +1,8 @@
 function defaultResize(){
     $('#wrapper').css('height', window.innerHeight + 'px');
+
     // $('#wrapper > div').css('height', window.innerHeight + 'px');
+    // $('#wrapper > div').css('width', window.innerWidth + 'px');
 }
 
 $(window).resize(function(){
