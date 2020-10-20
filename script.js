@@ -1,13 +1,16 @@
 function defaultResize(){
     $('#wrapper').css('height', window.innerHeight + 'px');
+    // $('#wrapper > div').css('height', window.innerHeight + 'px');
 }
 
 $(window).resize(function(){
+    console.log('resize');
     defaultResize();
 });
 
 
 $(document).ready(function() {
+    console.log('ready');
     defaultResize();
 });
 
