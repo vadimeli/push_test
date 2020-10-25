@@ -1,8 +1,24 @@
 function defaultResize(){
     $('#wrapper').css('height', window.innerHeight + 'px');
+    $('#wrapper > div').css('width', '100%');
 
-    // $('#wrapper > div').css('height', window.innerHeight + 'px');
-    // $('#wrapper > div').css('width', window.innerWidth + 'px');
+
+    let divNewWidth = 100;
+
+    let sizing = true;
+
+    while(sizing === true){
+        let screenHeight = window.innerHeight;
+        let videoHeight = $("video").outerHeight();
+        if(screenHeight < videoHeight){
+            divNewWidth = divNewWidth - 1;
+            $('#wrapper > div').css('width', divNewWidth+'%');
+        } else {
+            sizing = false;
+        }
+    }
+
+
 }
 
 $(window).resize(function(){
@@ -79,6 +95,7 @@ $("#wrapper > div > div").click(function () {
 function videoEnded() {
     $("#wrapper > div > div").css('display', 'block');
 }
+
 
 
 

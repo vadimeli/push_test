@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 
@@ -10,18 +10,20 @@ body {
     /*height: 100vh;*/
     background: black;
     display: flex;
-    flex-direction: column;
+    align-items: center;
     justify-content: center;
 }
 
 #wrapper > div {
     width: 100%;
+    /*height: 100%;*/
     position: relative;
 }
 
 #wrapper > div > video {
     width: 100%;
     height: 100%;
+
 }
 
 #wrapper > div > video:not(:nth-child(1)) {
